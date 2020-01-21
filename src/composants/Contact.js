@@ -17,8 +17,6 @@ export class Contact extends Component {
      // C'est juste pour faire le lien
 
     this.props.supprimeClick();
-    console.log("props", this.props);
-    console.log("state", this.state);
   };
 
   render() {

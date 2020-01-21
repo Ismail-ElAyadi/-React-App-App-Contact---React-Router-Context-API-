@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Contact from "./Contact";
 
 export class Liste extends Component {
+
   state = {
     infoContacts: [
       {
@@ -31,7 +32,6 @@ export class Liste extends Component {
     this.setState({
       infoContacts: nvContacts
     });
-    
   };
 
   render() {
@@ -48,6 +48,7 @@ export class Liste extends Component {
           />
         ))}
       </div>
+      
     );
   }
 }
