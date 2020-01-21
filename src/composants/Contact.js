@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class Contact extends Component {
   state = {
-    show: true
+    show: false
   };
   montrerContact = () => {
     this.setState({
@@ -10,6 +10,11 @@ export class Contact extends Component {
       show: !this.state.show
     });
   };
+
+  supprimeContact =()=> {
+this.props.supprimeClick()
+
+  }
 
   render() {
     return (
@@ -38,7 +43,7 @@ export class Contact extends Component {
           <i
             className="fas fa-times"
             style={{ cursor: "pointer", float: "right", color: "red" }}
-          ></i>
+          onClick={this.supprimeContact}></i>
         </h4>
         {/* VERSION TERNAIRE*/}
         {this.state.show ? (

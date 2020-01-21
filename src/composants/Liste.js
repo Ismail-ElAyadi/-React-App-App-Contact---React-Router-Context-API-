@@ -4,7 +4,7 @@ import Contact from './Contact'
 export class Liste extends Component {
 
     state = {
-        infocontacts:[
+        infoContacts: [
             {
                 id:1,
                 nom:'René Doe',
@@ -25,15 +25,28 @@ export class Liste extends Component {
             }
         ]
     }
+    supprime = (id) => {
+        // On Filtre l'id séléctionné 
+        const nvContacts = this.state.infoContacts.filter(elem => 
+            elem.id !== id)
+// On recré le tableau sans l'élément qui possédait l'id séléctionné
+          this.setState({
+            infoContacts: nvContacts
+          })  
+      
+    }
+
     render() {
         return (
             <div>
-                {this.state.infocontacts.map(el => (
+                {this.state.infoContacts.map(elem => (
                     <Contact
-                    key={el.id}
-                    nom={el.nom}
-                    email={el.email}
-                    tel={el.tel}/>
+                    key={elem.id}
+                    nom={elem.nom}
+                    email={elem.email}
+                    tel={elem.tel}
+                    supprimeClick={()=> this.supprime(elem.id)}
+                    />
         
                 ))}
             </div>
