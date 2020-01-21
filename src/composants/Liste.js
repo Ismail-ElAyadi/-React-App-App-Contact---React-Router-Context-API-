@@ -4,7 +4,7 @@ import Contact from './Contact'
 export class Liste extends Component {
 
     state = {
-        contacts:[
+        infocontacts:[
             {
                 id:1,
                 nom:'René Doe',
@@ -28,12 +28,12 @@ export class Liste extends Component {
     render() {
         return (
             <div>
-                {this.state.contacts.map(contact => (
+                {this.state.infocontacts.map(el => (
                     <Contact
-                    key={contact.id}
-                    nom={contact.nom}
-                    email={contact.email}
-                    tel={contact.tel}/>
+                    key={el.id}
+                    nom={el.nom}
+                    email={el.email}
+                    tel={el.tel}/>
         
                 ))}
             </div>
