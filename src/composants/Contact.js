@@ -12,8 +12,13 @@ export class Contact extends Component {
   };
 
   supprimeContact = () => {
-    // fait référence à supprimeClick de Liste.js
+    // On séléctionne les props pour leur appliquer cette méthode.
+    // fait référence à supprimeClick  de Liste.js qui va se charger de DElete
+     // C'est juste pour faire le lien
+
     this.props.supprimeClick();
+    console.log("props", this.props);
+    console.log("state", this.state);
   };
 
   render() {

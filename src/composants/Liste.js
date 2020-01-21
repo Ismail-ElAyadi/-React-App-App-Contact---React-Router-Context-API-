@@ -31,6 +31,7 @@ export class Liste extends Component {
     this.setState({
       infoContacts: nvContacts
     });
+    
   };
 
   render() {
