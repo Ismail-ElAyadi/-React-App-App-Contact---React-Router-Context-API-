@@ -11,28 +11,25 @@ export class Contact extends Component {
     });
   };
 
-  supprimeContact =()=> {
-this.props.supprimeClick()
-
-  }
+  supprimeContact = () => {
+    // fait référence à supprimeClick de Liste.js
+    this.props.supprimeClick();
+  };
 
   render() {
     return (
       <div className="card card-body mb-3 text-center">
         <h4>
           {this.props.nom}&nbsp;
-          {this.state.show ?
-    
-          (
+          {this.state.show ? (
             // Si state = true => Fleche vers le Haut
             <i
-              style={{ cursor: "pointer", alignSelf:"right" }}
+              style={{ cursor: "pointer", alignSelf: "right" }}
               className="fas fa-sort-up"
               onClick={this.montrerContact}
             ></i>
-          ) : 
-          // Si state = false => Fleche vers le bas
-          (
+          ) : (
+            // Si state = false => Fleche vers le bas
             <i
               style={{ cursor: "pointer" }}
               className="fas fa-sort-down"
@@ -43,7 +40,8 @@ this.props.supprimeClick()
           <i
             className="fas fa-times"
             style={{ cursor: "pointer", float: "right", color: "red" }}
-          onClick={this.supprimeContact}></i>
+            onClick={this.supprimeContact}
+          ></i>
         </h4>
         {/* VERSION TERNAIRE*/}
         {this.state.show ? (
