@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Contact from "./Contact";
 
 export class Liste extends Component {
@@ -36,7 +36,7 @@ export class Liste extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         {this.state.infoContacts.map(elem => (
           <Contact
             key={elem.id}
@@ -47,7 +47,7 @@ export class Liste extends Component {
             supprimeClick={() => this.supprime(elem.id)}
           />
         ))}
-      </div>
+      </Fragment>
       
     );
   }
