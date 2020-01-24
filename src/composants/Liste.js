@@ -30,7 +30,8 @@ return(
             email={elem.email}
             tel={elem.tel}
             //On l'appel depuis Contact.js
-            supprimeClick={() => this.supprime(elem.id)}
+
+            //supprimeClick={() => this.supprime(elem.id)} Supprimer pourContexte
           />
         ))}
       </Fragment>
