@@ -19,7 +19,8 @@ return(
   // Consumer = celui qui utilise donc ici Liste.JS
 <Consumer>
 {
-  value =>{
+
+  value =>{// onpeut changer le nom mais fait référence a Value de Context.js value = this.state
 
 return(
 <Fragment>

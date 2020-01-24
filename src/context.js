@@ -13,7 +13,7 @@ const reducer = (state, action) => {
 //action.type = case
   switch (action.type) {
     case "DELETE_CONTACT":
-      console.log(React.createContext())
+
       return {
         infoContacts: state.infoContacts.filter(
           el => el.id !== action.propReducer
@@ -24,7 +24,7 @@ const reducer = (state, action) => {
   }
 };
 
-//Provider = celui qui donne en Anglais
+//Provider = celui qui donne en Anglais , donc c'est lui qui va fournir le state
 export class Provider extends Component {
   // on Recupere le state du component Liste
   state = {
@@ -57,16 +57,16 @@ export class Provider extends Component {
 
   render() {
     return (
-      //On Prend tout le state on appel la variable Conxt et PRovider = propriété de context qui permet de faire hériter les propriété au composant
+      //On Prend tout le state on appel la variable Con et PRovider = propriété de context qui permet de faire hériter les propriété au composant
 
       <Context.Provider value={this.state}>
-        {" "}
         {
-          this.props.children // contenuqui est dans le composant au moment de l'initialisation <Consumer></Consumer>
-        }{" "}
+          this.props.children // contenu qui est dans le composant au moment de l'initialisation entre les balises : <Consumer></Consumer>
+        }
       </Context.Provider>
     );
   }
 }
-//Consumer = Utilisateur et  Consumer= propriété de l'objet contexte
+//Consumer = Utilisateur et  Consumer= propriété de l'objet contexte et ce qui va permettre d'utiliser le state.
+// <Consumer></Consumer>
 export const Consumer = Context.Consumer;
