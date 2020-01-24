@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Contact from "./Contact";
-
+import{Consumer} from'../context'
 export class Liste extends Component {
 
   supprime = id => {
@@ -13,9 +13,15 @@ export class Liste extends Component {
   };
 
   render() {
-    return (
-      <Fragment>
-        {this.state.infoContacts.map(elem => (
+
+return(
+<Consumer>
+{
+  value =>{
+
+return(
+<Fragment>
+        {value.infoContacts.map(elem => (
           <Contact
             key={elem.id}
             nom={elem.nom}
@@ -26,8 +32,13 @@ export class Liste extends Component {
           />
         ))}
       </Fragment>
+)
+  }
 
-    );
+}
+</Consumer>
+
+)
   }
 }
 
