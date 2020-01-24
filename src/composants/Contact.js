@@ -11,16 +11,19 @@ export class Contact extends Component {
       show: !this.state.show
     });
   };
-
-  supprimeContact = () => {
     /*
 Ancienne Version
+  supprimeContact = () => {
+
    On séléctionne les props pour leur appliquer cette méthode.
     fait référence à supprimeClick  de Liste.js qui va se charger de DElete
      C'est juste pour faire le lien
 
-    #Supprimer pour faire le context => this.props.supprimeClick();*/
-  };
+    #Supprimer pour faire le context => this.props.supprimeClick();
+  };*/
+
+  supprimeContact = (id,dispatch) => {
+  dispatch({type:'DELETE_CONTACT', payload: id})}
 
   render() {
 
@@ -53,7 +56,7 @@ return (
       <i
         className="fas fa-times"
         style={{ cursor: "pointer", float: "right", color: "red" }}
-        onClick={this.supprimeContact}
+        onClick={() => this.supprimeContact(this.props.id,value.dispatch)}
       ></i>
     </h4>
     {/* VERSION TERNAIRE*/}

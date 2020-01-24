@@ -25,6 +25,7 @@ return(
 <Fragment>
         {value.infoContacts.map(elem => (
           <Contact
+            id={elem.id}
             key={elem.id}
             nom={elem.nom}
             email={elem.email}
