@@ -6,7 +6,7 @@ import { Provider } from "./context";
 
 class App extends Component {
   render() {
-//Question : Provider devient le parents et rend toutes les states accessibles aux enfents???
+// Provider= celui qui donne
     return (
       <Provider>
         <div className="App">

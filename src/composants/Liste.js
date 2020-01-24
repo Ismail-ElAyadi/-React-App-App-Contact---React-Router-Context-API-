@@ -15,6 +15,8 @@ export class Liste extends Component {
   render() {
 
 return(
+
+  // Consumer = celui qui utilise donc ici Liste.JS
 <Consumer>
 {
   value =>{
