@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Consumer } from "../context";
 
 export class Contact extends Component {
+
   state = {
     show: false
   };
+
   montrerContact = () => {
     this.setState({
       // Permet de changer et de mettre l'inverse de l'état actuel.
@@ -23,7 +25,8 @@ Ancienne Version
   };*/
 
   supprimeContact = (id,dispatch) => {
-  dispatch({type:'DELETE_CONTACT', payload: id})}
+    dispatch({type:'DELETE_CONTACT', propReducer: id})
+  }
 
   render() {
 
