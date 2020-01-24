@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 
 // Pour créer le context
+// le Context est un objet avec qui possede entre autre
+// la propriété Consumer et Provider
 const Context = React.createContext();
 
 
-// reducer fexectute l'action que j'envoi LEVIER
+// reducer exectute l'action que j'envoi  = LEVIER
 
 const reducer = (state, action) => {
+
+//action.type = case
   switch (action.type) {
     case "DELETE_CONTACT":
+      console.log(React.createContext())
       return {
         infoContacts: state.infoContacts.filter(
           el => el.id !== action.propReducer
@@ -63,5 +68,5 @@ export class Provider extends Component {
     );
   }
 }
-//Consumer = Utilisateur
+//Consumer = Utilisateur et  Consumer= propriété de l'objet contexte
 export const Consumer = Context.Consumer;
