@@ -74,8 +74,10 @@ return (
 );
 }
 
-}value
-value
+}
+
+</Consumer>
+)
 
   }
 }
