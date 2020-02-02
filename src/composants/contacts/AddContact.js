@@ -62,6 +62,8 @@ this.setState({
     tel: ""
 
 })
+
+this.props.history.push("/")
 }
 
 

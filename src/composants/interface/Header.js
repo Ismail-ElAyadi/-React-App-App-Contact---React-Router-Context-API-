@@ -15,6 +15,9 @@ const Header = () => {
                 <Link to="/ajout" className="nav-link d-inline-block mr-3">
                 Ajouter
                 </Link>
+                <Link to="/apropos" className="nav-link d-inline-block mr-3">
+                À Propos
+                </Link>
             </li>
             </ul>
         </div>
