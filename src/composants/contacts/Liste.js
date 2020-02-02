@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Contact from "./Contact";
-import{Consumer} from'../context'
+import{Consumer} from'../../context'
 export class Liste extends Component {
 
   supprime = id => {

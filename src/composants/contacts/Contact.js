@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // on importe consumer pour pouvoirutiliser <Consumer></Consumer>
-import { Consumer } from "../context";
+import { Consumer } from "../../context";
 
 export class Contact extends Component {
 
