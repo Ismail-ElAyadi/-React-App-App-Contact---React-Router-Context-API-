@@ -1,4 +1,5 @@
 import React from "react";
+import{Link} from "react-router-dom"
 
 const Header = () => {
     return (
@@ -8,9 +9,9 @@ const Header = () => {
             <a href="/" className="navbar-brand">AppContacts</a>
             <ul className="navbar-nav">
             <li className="nav-item ml-auto">
-                <a href="/" className="nav-link">
-                Accueil
-                </a>
+                <Link to="/liste" className="nav-link">
+                Liste
+                </Link>
             </li>
             </ul>
         </div>

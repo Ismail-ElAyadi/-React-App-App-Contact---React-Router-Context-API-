@@ -4,20 +4,23 @@ import Header from "./composants/interface/Header";
 import Liste from "./composants/contacts/Liste";
 import { Provider } from "./context";
 import AddContact from "./composants/contacts/AddContact";
+import{BrowserRouter as Router, Route}from'react-router-dom'
 
 class App extends Component {
   render() {
 // Provider= celui qui donne
     return (
       <Provider>
-        <div className="App">
-          <Header />
+        <Router>
+          <div className="App">
+            <Header />
 
-          <div className="container">
-            <AddContact/>
-            <Liste />
+            <div className="container">
+              {/* <AddContact/> */}
+              <Route exact path ="/liste" component ={Liste}/>
+            </div>
           </div>
-        </div>
+        </Router>
       </Provider>
     );
   }
