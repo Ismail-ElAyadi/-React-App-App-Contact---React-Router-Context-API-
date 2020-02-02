@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./composants/interface/Header";
 import Liste from "./composants/contacts/Liste";
 import { Provider } from "./context";
+import AddContact from "./composants/contacts/AddContact";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Header />
 
           <div className="container">
+            <AddContact/>
             <Liste />
           </div>
         </div>
