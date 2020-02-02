@@ -19,6 +19,14 @@ const reducer = (state, action) => {
           el => el.id !== action.propReducer
         )
       };
+
+    case "ADD_CONTACT" :
+    return {
+
+infoContacts:[action.propReducer, ...state.infoContacts]
+
+
+    }
     default:
       return state;
   }
