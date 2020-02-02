@@ -6,13 +6,25 @@ export default class AddContact extends Component {
     email: "",
     tel: ""
   };
+
+onChange = e => this.setState({
+    [e.target.name]: e.target.value
+/* e.target.name = le name de l'input et on change la state avec la value de l'input .. so Smart :)  */
+
+
+})
+
+onSubmit = e => {
+e.preventDefault()
+console.log(this.state)
+}
   render() {
     return (
       <div className="card mb-3">
         <div className="card-header">Ajouter un contact</div>
 
         <div className="card-body">
-          <form>
+          <form onSubmit={this.onSubmit}>
             <div className="from-group">
               <label htmlFor="nom">Nom</label>
               <input
@@ -46,11 +58,11 @@ export default class AddContact extends Component {
                 onChange={this.onChange}
               />
             </div>
-<input type="submit"
-value="Ajouter"
-className="btn btn-block btn-primary mt-3"
-/>
-
+            <input
+              type="submit"
+              value="Ajouter"
+              className="btn btn-block btn-primary mt-3"
+            />
           </form>
         </div>
       </div>
