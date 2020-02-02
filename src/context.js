@@ -1,32 +1,27 @@
 import React, { Component } from "react";
 
+
 // Pour créer le context
 // le Context est un objet avec qui possede entre autre
 // la propriété Consumer et Provider
 const Context = React.createContext();
 
-
 // reducer exectute l'action que j'envoi  = LEVIER
 
 const reducer = (state, action) => {
-
-//action.type = case
+  //action.type = case
   switch (action.type) {
     case "DELETE_CONTACT":
-
       return {
         infoContacts: state.infoContacts.filter(
           el => el.id !== action.propReducer
         )
       };
 
-    case "ADD_CONTACT" :
-    return {
-
-infoContacts:[action.propReducer, ...state.infoContacts]
-
-
-    }
+    case "ADD_CONTACT":
+      return {
+        infoContacts: [action.propReducer, ...state.infoContacts]
+      };
     default:
       return state;
   }
