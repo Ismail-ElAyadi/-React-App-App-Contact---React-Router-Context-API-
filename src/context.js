@@ -34,20 +34,8 @@ export class Provider extends Component {
     infoContacts: [
       {
         id: 1,
-        nom: "René Doe",
-        email: "jhi@gmail.com",
-        tel: "655-555-555"
-      },
-      {
-        id: 2,
-        nom: "Legende Doe",
-        email: "jhi@gmail.com",
-        tel: "655-555-555"
-      },
-      {
-        id: 3,
-        nom: "Isma",
-        email: "jhi@gmail.com",
+        nom: "Example Contact",
+        email: "example@gmail.com",
         tel: "655-555-555"
       }
     ],
