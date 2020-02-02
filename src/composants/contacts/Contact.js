@@ -66,8 +66,12 @@ return (
     {/* VERSION TERNAIRE*/}
     {this.state.show ? (
       <ul className="card card-body mb-3">
-        <li className="list-group-item">Email : {this.props.email}</li>
-        <li className="list-group-item">Téléphone : {this.props.tel}</li>
+        <li className="list-group-item"  >Email : <a  style={{
+          color: "black"
+        }}  href={"mailto:" + this.props.email} >{this.props.email}</a></li>
+        <li className="list-group-item">Téléphone : <a style={{
+          color: "black"
+        }} href={"tel:" + this.props.tel}>{this.props.tel}</a></li>
       </ul>
     ) : null}
   </div>
