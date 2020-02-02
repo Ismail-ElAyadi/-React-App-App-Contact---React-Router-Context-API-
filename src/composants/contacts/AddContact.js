@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
 import uuid from 'uuid'
+
+import{Link} from "react-router-dom"
 /*uuid = pour générer des ids  */
 export default class AddContact extends Component {
   state = {
@@ -113,9 +115,11 @@ this.setState({
                   <input
                     type="submit"
                     value="Ajouter"
-                    className="btn btn-block btn-primary mt-3"
+                    className="btn btn-block btn-success mt-3"
                   />
+
                 </form>
+                <Link className="nav-link btn btn-block btn-warning mt-3" to="/liste"> Voir Liste </Link>
               </div>
             </div>
           );

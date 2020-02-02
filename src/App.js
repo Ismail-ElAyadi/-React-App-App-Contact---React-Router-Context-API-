@@ -17,7 +17,9 @@ class App extends Component {
 
             <div className="container">
               {/* <AddContact/> */}
+              <Route exact path ="/" component ={Liste}/>
               <Route exact path ="/liste" component ={Liste}/>
+              <Route exact path ="/ajout" component ={AddContact}/>
             </div>
           </div>
         </Router>

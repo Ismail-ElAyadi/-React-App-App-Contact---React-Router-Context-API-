@@ -24,6 +24,8 @@ return(
 
 return(
 <Fragment>
+
+<h1 className="text-center mb-3 ">Vos Contacts</h1>
         {value.infoContacts.map(elem => (
           <Contact
             id={elem.id}
